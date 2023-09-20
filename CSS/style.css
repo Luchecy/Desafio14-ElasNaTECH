@@ -1,0 +1,168 @@
+*{
+    font-family: sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+}
+
+:root{
+    --color-purple: #634591;
+    --color-lpink: #f1858e;
+    --color-blue: #6F8ABF;
+    --color-white: #ffffff;
+}
+
+.header{
+    text-align: center;
+    margin: auto;
+    background-color: var(--color-purple);
+}
+
+.header_logo{
+    width: 4.5em;
+    height: auto;
+}
+
+#hamburguer{
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    display: block;
+    text-align: center;
+    padding: 0.3em;
+    cursor: pointer;
+    font-size: 2em;
+}
+
+.header_nav{
+    background-color: var(--color-purple);
+    display: none;
+    margin-top: 1em;
+}
+
+ul{
+    margin: 0;
+}
+
+.header_nav ul{
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: .8em;
+}
+
+.header_nav a{
+    color: var(--color-white);
+    padding: 1em;
+    text-decoration: none;
+}
+
+.header_nav.show{
+    display: block;
+}
+
+.header_nav a:hover{
+    color: var(--color-lpink);
+    background-color: color-mix(in srgb, var(--color-purple), var(--color-white) 20%);
+}
+
+.fundo_main{
+    background-image: url(../Imagens/bg1.jpg);
+    background-size: cover;
+    background-position: center center; /*alinhamento horizontal e vertical*/
+    background-repeat: no-repeat;
+    height: 100vh; /*para o footer não ficar colado no header*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer{
+    background-color: var(--color-purple);
+    padding: 1em;
+    text-align: center;
+}
+
+div.galeria a{
+    text-decoration: none;
+    color: var(--color-white);
+    display: inline-block;
+    background-color: var(--color-blue);
+    padding: 1em 1.8em;
+    font-size: 1.2em;
+    border-radius: 5px;
+    letter-spacing: .1em;
+    font-family: sans-serif;
+}
+
+div.galeria a:hover{
+    background-color: var(--color-white);
+    color: var(--color-lpink);
+}
+
+.logos_footer{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.tamanho{
+    width: 2.5em;
+}
+
+.texto_footer{
+    font-size: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin:0;
+    padding-top: .8rem;
+    color: var(--color-white);
+}
+
+@media screen and (min-width: 48em){ /*768px maior que*/
+    #hamburguer{
+        display: none;
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--color-purple);
+    }
+
+    .header_logo{
+        margin-left: 2em;
+    }
+
+    .header_nav{
+        display: block;
+    }
+
+    .header_nav ul{
+        margin-right: 2em;
+        font-size: .9em;
+    }
+
+    .header_nav li{
+        display: inline-block;
+    }
+
+    .header_nav a{
+        border-radius: 5px;
+    }
+
+    .header_nav a:hover{
+        background-color: var(--color-white);
+        color: var(--color-lpink);
+    }
+}
+
+@media screen and (min-width: 48em){/*768px maior que */
+
+    .logos_footer{
+        flex-direction: row;
+        justify-content: center;
+        gap:1.5em;
+    }
+
+}

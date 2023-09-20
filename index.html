@@ -1,11 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+
+    <link rel="apple-touch-icon" sizes="192x192" href="Imagens/o192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Imagens/o32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Imagens/o16.png">
+
+    <title>Luchecy Ribeiro - Desafio 14 ♥</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
+    <header class="header">
+        <img src="Imagens/logo1.png" alt="bg1" class="header_logo">
+    
+        <span id="hamburguer" class="material-symbols-rounded">
+            menu
+            </span>
+
+        <nav id="itens_menu" class="header_nav">
+            <ul>
+                <li><a target="_blank" href="https://www.leagueoflegends.com/pt-br/how-to-play/">O JOGO</a></li>
+                <li><a target="_blank" href="https://www.leagueoflegends.com/pt-br/champions/">CAMPEÕES</a></li>
+                <li><a target="_blank" href="https://discord.com/invite/runeterra-br">DISCORD</a></li>
+                <li><a target="_blank" href="https://www.riotgames.com/pt-br">RIOT GAMES</a></li>
+            </ul>            
+        </nav>
+    </header>
+
+    <main>
+        <section class="fundo_main">
+        <div class="galeria">
+            <a href="galeria.html" target="_blank">Galeria</a>
+        </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="logos_footer">
+            <div>
+                <a href="https://www.linkedin.com/in/luchecyribeiro/" target="_blank">
+                    <img src="Imagens/linkedin.png" alt="linkedin" class="tamanho">
+                </a>
+            </div>
+            <div>
+                <a href="https://github.com/Luchecy" target="_blank">
+                    <img src="Imagens/github.png" alt="github" class="tamanho">
+                </a>
+            </div>
+            <div>
+                <a href="https://www.instagram.com/luchecy/" target="_blank">
+                    <img src="Imagens/instagram.png" alt="instagram" class="tamanho">
+                </a>
+            </div>
+        </div>
+        <p class="texto_footer">♥ Luchecy Ribeiro - Elas Na TECH 2023 ♥</p>
+    </footer>
+
+    <script>
+        var hamburguer = document.getElementById('hamburguer');
+        var itens_menu = document.getElementById('itens_menu');
+
+        hamburguer.addEventListener('click', aparecer);
+
+        function aparecer (){
+            if(itens_menu.classList.display == 'block'){
+                itens_menu.classList.remove('show');
+            }else{
+                itens_menu.classList.toggle('show');
+            }
+        }
+    </script>
     
 </body>
 </html>
